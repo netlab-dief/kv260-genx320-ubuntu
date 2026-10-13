@@ -289,9 +289,9 @@ def decode_events(payload, frame):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--device", default="/dev/video0")
-    parser.add_argument("--seconds", type=float, default=15)
-    parser.add_argument("--scale", type=int, default=2)
-    parser.add_argument("--persistence", type=float, default=0.80)
+    parser.add_argument("--seconds", type=float, default=30)
+    parser.add_argument("--scale", type=int, default=1)
+    parser.add_argument("--persistence", type=float, default=0.15)
     args = parser.parse_args()
 
     if not (0 <= args.persistence < 1):
