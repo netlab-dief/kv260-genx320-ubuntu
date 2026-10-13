@@ -113,6 +113,24 @@ space during longer captures.
 - Long-term capture reliability has not been fully established.
 - The custom PSE2 pixel format may cause a warning during format enumeration.
 
+## Low-latency live preview
+
+The default source configuration retains 1 MiB transfers.
+
+For an experimental low-latency preview build, apply:
+
+```bash
+patch -p1 < patches/64k-low-latency-preview.patch
+```
+
+Then rebuild the video drivers against the matching kernel headers.
+
+The tested preview configuration uses 64 KiB DMA transfers, the optimized `tools/genx320_live_fast.py` decoder, and a low persistence value such as 0.15.
+
+The 64 KiB configuration substantially improved observed live responsiveness on the KV260. Long-duration reliability of this variant remains to be validated.
+
+The preview setup script references the original test deployment path and may require path adjustments on another system.
+
 **Acknowledgments and licenses**
 
 This work builds on the original GenX320 sensor and KV260 video
