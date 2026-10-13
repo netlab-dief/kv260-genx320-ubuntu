@@ -1,0 +1,40 @@
+# Linux kernel module build artifacts
+*.o
+*.ko
+*.mod
+*.mod.c
+*.cmd
+*.d
+*.symvers
+Module.symvers
+modules.order
+.tmp_versions/
+modules.builtin*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Captures and generated media
+*.raw
+*.avi
+*.mp4
+*.png
+
+# Logs and recovery artifacts
+*.log
+*.tar.gz
+*.before-*
+*.backup
+*.bak
+
+# FPGA deployment binaries (review licensing separately)
+*.bit
+*.bit.bin
+*.dtbo
+
+# Editor files
+*~
+.swp
+.vscode/
