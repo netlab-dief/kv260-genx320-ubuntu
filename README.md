@@ -69,10 +69,6 @@ make KERNEL_SRC=/lib/modules/$(uname -r)/build -j$(nproc)
 Build the video drivers using the Makefile and kernel-header configuration provided in `zynq-video-drivers`.
 
 ## Setup
-The included script is based on the tested deployment layout `/home/ubuntu/genx320-port`.
-
-Review its module paths before using it on a different system.
-
 With the correct FPGA application active, run:
 ```bash
 sudo bash scripts/genx320-setup.sh
