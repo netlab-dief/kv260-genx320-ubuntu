@@ -137,3 +137,4 @@ This work builds on the original GenX320 sensor and KV260 video
 driver sources, as well as the PetaLinux reference implementation.
 Original upstream projects, copyright notices and applicable
 licenses must be retained and documented before public distribution.
+LLM assistance was used to develop this port.
